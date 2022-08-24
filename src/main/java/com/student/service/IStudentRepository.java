@@ -8,6 +8,6 @@ import com.student.model.Student;
 
 public interface IStudentRepository extends JpaRepository<Student, Integer> {
 
-	List<Student> findByClass(String studentClass);
+	List<Student> findByStudentClass(String studentClass);
 	
 }

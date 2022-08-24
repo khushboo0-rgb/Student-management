@@ -86,7 +86,7 @@ public class StudentController {
 		return new ResponseEntity<Student>(studentService.updateStudent(student, id), HttpStatus.OK);
 	}
  
- @GetMapping("/getstudent/{studentClass}")
+ @GetMapping("/getstudentByClass/{studentClass}")
  public List<Student> getStudentByClass(@PathVariable String studentClass)
  {
 	 List<Student> student = studentService.getStudent(studentClass);

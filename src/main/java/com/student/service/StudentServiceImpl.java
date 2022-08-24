@@ -19,7 +19,7 @@ public class StudentServiceImpl implements IStudentService {
 
 	@Override
 	public Integer saveStudent(Student student) {
-		// TODO Auto-generated method stub
+		
 		Student savedStudent = studentRepository.save(student);
 		
 		return savedStudent.getId() ;
@@ -31,7 +31,7 @@ public class StudentServiceImpl implements IStudentService {
 	}
 	@Override
 	public Optional<Student> getStudent(Integer id) {
-		// TODO Auto-generated method stub
+		
 		return studentRepository.findById(id);
 	}
 	@Override
@@ -41,7 +41,7 @@ public class StudentServiceImpl implements IStudentService {
 	}
 	@Override
 	public void deleteAllStudents() {
-		// TODO Auto-generated method stub
+	
 		studentRepository.deleteAll();
 		
 	}
@@ -61,7 +61,7 @@ public class StudentServiceImpl implements IStudentService {
 	}
 	@Override
 	public List<Student> getStudent(String studentClass) {
-		return studentRepository.findByClass(studentClass);
+		return studentRepository.findByStudentClass(studentClass);
 	} 
 	}
 
